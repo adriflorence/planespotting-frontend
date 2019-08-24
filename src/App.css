@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+}
+
+.flight_lists {
+    display: flex;
+    justify-content: space-around;
+    text-align: justify-all;
+}
+

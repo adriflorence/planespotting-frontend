@@ -10,6 +10,16 @@ class App extends React.Component{
     }
 
     componentDidMount() {
+        const intervalId = setInterval(this.updateFlightList, 1000);
+        this.setState({intervalId: intervalId});
+    }
+
+    componentWillUnmount() {
+        // use intervalId from the state to clear the interval
+        clearInterval(this.state.intervalId);
+    }
+
+    updateFlightList = () => {
         fetch('http://localhost:8080/flights')
             .then(response => response.json())
             .then(json => {

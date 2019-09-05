@@ -14,6 +14,7 @@ class FlightList extends React.Component {
                         <th>Airline</th>
                         <th>Flight Code</th>
                         <th>Airport</th>
+                        <th>Gate</th>
                         <th>Time</th>
                         <th>Status</th>
                     </tr>
@@ -25,6 +26,7 @@ class FlightList extends React.Component {
                             <td> {flight.airline}</td>
                             <td> {flight.flightCode}</td>
                             <td> {flight.airport.name }</td>
+                            <td> {flight.gate ? flight.gate.id : ""} </td>
                             <td>
                                 <Moment format="HH:mm">
                                     {flight.time}

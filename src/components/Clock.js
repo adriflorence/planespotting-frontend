@@ -5,7 +5,7 @@ class Clock extends React.Component {
 
     state = {
         faketime: ""
-    }
+    };
 
     componentDidMount() {
         const intervalId = setInterval(this.timer, 1000);
@@ -27,11 +27,11 @@ class Clock extends React.Component {
             .catch(e => {
                 console.log(e);
             })
-    }
+    };
 
     render(){
         return (
-            <div>
+            <div className={"clock"}>
                 {this.state.faketime!==""?
                     <Moment format="HH:mm">
                         { this.state.faketime }

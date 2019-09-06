@@ -1,13 +1,17 @@
 import React from 'react';
 import './App.css';
+import './App.sass';
 import FlightList from "./components/FlightList";
 import Clock from "./components/Clock";
+import arrival from './img/arrival.png';
+import departure from './img/departure.png';
+
 
 class App extends React.Component{
     state = {
         inbound_flights: [],
         outbound_flights: []
-    }
+    };
 
     componentDidMount() {
         const intervalId = setInterval(this.updateFlightList, 1000);
@@ -32,15 +36,21 @@ class App extends React.Component{
             .catch(e => {
                 console.log(e);
             })
-    }
+    };
 
     render() {
         return (
             <div className="App">
                 <Clock/>
-                <div className="flight_lists">
-                    <FlightList title="Arrivals" flights={this.state.inbound_flights}/>
-                    <FlightList title="Departures" flights={this.state.outbound_flights}/>
+                <div className="is-centered columns">
+                    <FlightList className="column"
+                                title="Arrivals"
+                                logo={arrival}
+                                flights={this.state.inbound_flights}/>
+                    <FlightList className="column"
+                                title="Departures"
+                                logo={departure}
+                                flights={this.state.outbound_flights}/>
                 </div>
             </div>
         );

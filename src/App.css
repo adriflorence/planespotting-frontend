@@ -2,9 +2,30 @@
   text-align: center;
 }
 
-.flight_lists {
-    display: flex;
-    justify-content: space-around;
-    text-align: justify-all;
+.clock {
+    color: #fff;
+    font-size: 3em;
+    padding: 0.3em;
 }
 
+.table_title {
+    background-color: #ffd014;
+    padding: 0.5em;
+    text-align: left;
+    color: #fff;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.table_title h1 {
+    font-size: 2em;
+}
+
+.table_title img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.yellow {
+    color: darkorange;
+}

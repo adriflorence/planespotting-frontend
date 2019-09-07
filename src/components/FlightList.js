@@ -4,7 +4,7 @@ import Moment from 'react-moment';
 class FlightList extends React.Component {
     render(){
         return (
-            <div className={"is-black"}>
+            <div className={"flight_list"}>
                 <div className={"table_title"}>
                     <img src={this.props.logo} alt="Landing airplane" />
                     <h1>{ this.props.title }</h1>
